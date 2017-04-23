@@ -1,0 +1,67 @@
+div.red-blood{
+	background-image: url(../images/decay/red-blood.png);
+}
+
+div.green-blood{
+	background-image: url(../images/decay/green-blood.png);
+}
+
+div.blue-blood{
+	background-image: url(../images/decay/blue-blood.png);
+}
+
+div.yellow-blood{
+	background-image: url(../images/decay/yellow-blood.png);
+}
+
+div.black-blood{
+	background-image: url(../images/decay/black-blood.png);
+}
+
+div.neon-bones{
+	background-image: url(../images/decay/neon-bones.png);
+}
+
+div.monster_1-1_dead{
+        background-image: url(../images/monsters/monster_1-1_dead.png);
+}
+
+div.monster_2-1_dead{
+        background-image: url(../images/monsters/monster_2-1_dead.png);
+}
+
+div.monster_3-1_dead{
+        background-image: url(../images/monsters/monster_3-1_dead.png);
+}
+
+div.monster_4-1_dead{
+        background-image: url(../images/monsters/monster_4-1_dead.png);
+}
+
+div.monster_1-2_dead{
+        background-image: url(../images/monsters/monster_1-2_dead.png);
+}
+
+div.monster_2-2_dead{
+        background-image: url(../images/monsters/monster_2-2_dead.png);
+}
+
+div.monster_3-2_dead{
+        background-image: url(../images/monsters/monster_3-2_dead.png);
+}
+
+div.monster_1-3_dead{
+        background-image: url(../images/monsters/monster_1-3_dead.png);
+}
+
+div.monster_2-3_dead{
+        background-image: url(../images/monsters/monster_2-3_dead.png);
+}
+
+div.monster_3-3_dead{
+        background-image: url(../images/monsters/monster_3-3_dead.png);
+}
+
+div.monster_4-3_dead{
+        background-image: url(../images/monsters/monster_4-3_dead.png);
+}

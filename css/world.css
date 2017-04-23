@@ -1,0 +1,418 @@
+div.floor_0_rocks{
+	background-color: gray;
+	background-image: url(../images/world/floor_0_rocks.png);
+}
+
+div.floor_1_rocks{
+	background-color: gray;
+	background-image: url(../images/world/floor_1_rocks.png);
+}
+
+div.floor_2_rocks{
+	background-color: gray;
+	background-image: url(../images/world/floor_2_rocks.png);
+}
+
+div.wall_0_rocks{
+	background-color: gray;
+	background-image: url(../images/world/wall_0_rocks.png);
+}
+
+div.wall_1_rocks{
+	background-color: gray;
+	background-image: url(../images/world/wall_1_rocks.png);
+}
+
+div.wall_2_rocks{
+	background-color: gray;
+	background-image: url(../images/world/wall_2_rocks.png);
+}
+
+div.floor_0_sands{
+	background-color: yellow;
+	background-image: url(../images/world/floor_0_sands.png);
+}
+
+div.floor_1_sands{
+	background-color: yellow;
+	background-image: url(../images/world/floor_1_sands.png);
+}
+
+div.floor_2_sands{
+	background-color: yellow;
+	background-image: url(../images/world/floor_2_sands.png);
+}
+
+div.wall_0_sands{
+	background-color: yellow;
+	background-image: url(../images/world/wall_0_sands.png);
+}
+
+div.wall_1_sands{
+	background-color: yellow;
+	background-image: url(../images/world/wall_1_sands.png);
+}
+
+div.wall_2_sands{
+	background-color: yellow;
+	background-image: url(../images/world/wall_2_sands.png);
+}
+
+div.floor_0_woods{
+	background-color: green;
+	background-image: url(../images/world/floor_0_woods.png);
+}
+
+div.floor_1_woods{
+	background-color: green;
+	background-image: url(../images/world/floor_1_woods.png);
+}
+
+div.floor_2_woods{
+	background-color: green;
+	background-image: url(../images/world/floor_2_woods.png);
+}
+
+div.wall_0_woods{
+	background-color: green;
+	background-image: url(../images/world/wall_0_woods.png);
+}
+
+div.wall_1_woods{
+	background-color: green;
+	background-image: url(../images/world/wall_1_woods.png);
+}
+
+div.wall_2_woods{
+	background-color: green;
+	background-image: url(../images/world/wall_2_woods.png);
+}
+
+div.spec_decor_0_rocks {
+	background-color: gray;
+	background-image: url(../images/world/spec_decor_0_rocks.png);
+}
+
+div.spec_decor_1_rocks {
+	background-color: gray;
+	background-image: url(../images/world/spec_decor_1_rocks.png);
+}
+
+div.spec_decor_0_sands {
+	background-color: yellow;
+	background-image: url(../images/world/spec_decor_0_sands.png);
+}
+
+div.spec_decor_1_sands {
+	background-color: yellow;
+	background-image: url(../images/world/spec_decor_1_sands.png);
+}
+
+div.spec_decor_0_woods {
+	background-color: green;
+	background-image: url(../images/world/spec_decor_0_woods.png);
+}
+
+div.spec_decor_1_woods {
+	background-color: green;
+	background-image: url(../images/world/spec_decor_1_woods.png);
+}
+
+div.spec_decor_2_woods {
+	background-color: green;
+	background-image: url(../images/world/spec_decor_2_woods.png);
+}
+
+div.custom_decor_cb1 {
+	background-color: green;
+	background-image: url(../images/world/cb1.png);
+}
+
+div.custom_decor_cb2 {
+	background-color: green;
+	background-image: url(../images/world/cb2.png);
+}
+
+div.custom_decor_cb3 {
+	background-color: green;
+	background-image: url(../images/world/cb3.png);
+}
+
+div.custom_decor_cb4 {
+	background-color: green;
+	background-image: url(../images/world/cb4.png);
+}
+
+div.custom_decor_cb5 {
+	background-color: green;
+	background-image: url(../images/world/cb5.png);
+}
+
+div.custom_decor_cb6 {
+	background-color: green;
+	background-image: url(../images/world/cb6.png);
+}
+
+div.custom_decor_cb7 {
+	background-color: green;
+	background-image: url(../images/world/cb7.png);
+}
+
+div.rescue_pod {
+	background-color: gray;
+	background-image: url(../images/world/rescue_pod.png);
+}
+
+div.water {
+	background-image: url(../images/world/water.png);
+}
+
+div.custom_decor_ctdl1 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl1.png);
+}
+
+div.custom_decor_ctdl2 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl2.png);
+}
+
+div.custom_decor_ctdl3 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl3.png);
+}
+
+div.custom_decor_ctdl4 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl4.png);
+}
+
+div.custom_decor_ctdl5 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl5.png);
+}
+
+div.custom_decor_ctdl6 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl6.png);
+}
+
+div.custom_decor_ctdl7 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl7.png);
+}
+
+div.custom_decor_ctdl8 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl8.png);
+}
+
+div.custom_decor_ctdl9 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl9.png);
+}
+
+div.custom_decor_ctdl10 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl10.png);
+}
+
+div.custom_decor_ctdl11 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl11.png);
+}
+
+div.custom_decor_ctdl12 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl12.png);
+}
+
+div.custom_decor_ctdl13 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl13.png);
+}
+
+div.custom_decor_ctdl14 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl14.png);
+}
+
+div.custom_decor_ctdl15 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl15.png);
+}
+
+div.custom_decor_ctdl16 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl16.png);
+}
+
+div.custom_decor_ctdl17 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl17.png);
+}
+
+div.custom_decor_ctdl18 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl18.png);
+}
+
+div.custom_decor_ctdl19 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl19.png);
+}
+
+div.custom_decor_ctdl20 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl20.png);
+}
+
+div.custom_decor_ctdl21 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl21.png);
+}
+
+div.custom_decor_ctdl22 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl22.png);
+}
+
+div.custom_decor_ctdl23 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl23.png);
+}
+
+div.custom_decor_ctdl24 {
+	background-color: yellow;
+	background-image: url(../images/world/ctdl24.png);
+}
+
+div.dead_zone_mgm1 {
+	background-color: grey;
+	background-image: url(../images/world/mgm1.png);
+}
+
+div.dead_zone_mgm2 {
+	background-color: grey;
+	background-image: url(../images/world/mgm2.png);
+}
+
+div.dead_zone_mgm3 {
+	background-color: grey;
+	background-image: url(../images/world/mgm3.png);
+}
+
+div.dead_zone_mgm4 {
+	background-color: grey;
+	background-image: url(../images/world/mgm4.png);
+}
+
+div.dead_zone_mgm5 {
+	background-color: grey;
+	background-image: url(../images/world/mgm5.png);
+}
+
+div.dead_zone_mgm6 {
+	background-color: grey;
+	background-image: url(../images/world/mgm6.png);
+}
+
+div.dead_zone_mgm7 {
+	background-color: grey;
+	background-image: url(../images/world/mgm7.png);
+}
+
+div.dead_zone_mgm8 {
+	background-color: grey;
+	background-image: url(../images/world/mgm8.png);
+}
+
+div.dead_zone_mgm9 {
+	background-color: grey;
+	background-image: url(../images/world/mgm9.png);
+}
+
+div.dead_zone_mgmi1 {
+	background-color: grey;
+	background-image: url(../images/world/mgmi1.png);
+}
+
+div.dead_zone_mgmi3 {
+	background-color: grey;
+	background-image: url(../images/world/mgmi3.png);
+}
+
+div.dead_zone_mgmi7 {
+	background-color: grey;
+	background-image: url(../images/world/mgmi7.png);
+}
+
+div.dead_zone_mgmi9 {
+	background-color: grey;
+	background-image: url(../images/world/mgmi9.png);
+}
+
+div.custom_decor_sgn {
+	background-color: grey;
+	background-image: url(../images/world/sgn.png);
+}
+
+div.custom_decor_stol1 {
+	background-color: grey;
+	background-image: url(../images/world/stol1.png);
+}
+
+div.custom_decor_stol4 {
+	background-color: grey;
+	background-image: url(../images/world/stol4.png);
+}
+
+div.custom_decor_stol5 {
+	background-color: grey;
+	background-image: url(../images/world/stol5.png);
+}
+
+div.custom_decor_stol7 {
+	background-color: grey;
+	background-image: url(../images/world/stol7.png);
+}
+
+div.custom_decor_stol8 {
+	background-color: grey;
+	background-image: url(../images/world/stol8.png);
+}
+
+div.custom_decor_stol9 {
+	background-color: grey;
+	background-image: url(../images/world/stol9.png);
+}
+
+div.custom_decor_stol10 {
+	background-color: grey;
+	background-image: url(../images/world/stol10.png);
+}
+
+div.custom_decor_stol11 {
+	background-color: grey;
+	background-image: url(../images/world/stol11.png);
+}
+
+div.custom_decor_stol12 {
+	background-color: grey;
+	background-image: url(../images/world/stol12.png);
+}
+
+div.custom_decor_stol13 {
+	background-color: grey;
+	background-image: url(../images/world/stol13.png);
+}
+
+div.custom_decor_stol14 {
+	background-color: grey;
+	background-image: url(../images/world/stol14.png);
+}
+
+div.custom_decor_stol15 {
+	background-color: grey;
+	background-image: url(../images/world/stol15.png);
+}

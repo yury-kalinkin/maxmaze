@@ -1,0 +1,19 @@
+div.npc_tumo_front {
+	background-image: url(../images/npc/npc_tumo_front.png);
+}
+
+div.npc_tumo_back {
+	background-image: url(../images/npc/npc_tumo_back.png);
+}
+
+div.npc_tumo_right {
+	background-image: url(../images/npc/npc_tumo_right.png);
+}
+
+div.npc_tumo_left {
+	background-image: url(../images/npc/npc_tumo_left.png);
+}
+
+div.npc_tumo_damage {
+	background-image: url(../images/npc/npc_tumo_damage.png);
+}

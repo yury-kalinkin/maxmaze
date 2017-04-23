@@ -1,0 +1,74 @@
+.death {
+    margin-top: 10%;
+    display: block;
+    height: 352px;
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.deathMessage {
+	color: white;
+	align: center;
+	text-align: center;
+}
+
+.death_monster_1-1 {
+	background-image: url(../images/death/death_monster_1-1.png);
+	background-size: 100%;
+}
+
+.death_monster_2-1 {
+	background-image: url(../images/death/death_monster_2-1.png);
+	background-size: 100%;
+}
+
+.death_monster_3-1 {
+	background-image: url(../images/death/death_monster_3-1.png);
+	background-size: 100%;
+}
+
+.death_monster_4-1 {
+	background-image: url(../images/death/death_monster_4-1.png);
+	background-size: 100%;
+}
+
+.death_monster_1-2 {
+	background-image: url(../images/death/death_monster_1-2.png);
+	background-size: 100%;
+}
+
+.death_monster_2-2 {
+	background-image: url(../images/death/death_monster_2-2.png);
+	background-size: 100%;
+}
+
+.death_monster_3-2 {
+	background-image: url(../images/death/death_monster_3-2.png);
+	background-size: 100%;
+}
+
+.death_monster_1-3 {
+	background-image: url(../images/death/death_monster_1-3.png);
+	background-size: 100%;
+}
+
+.death_monster_2-3 {
+	background-image: url(../images/death/death_monster_2-3.png);
+	background-size: 100%;
+}
+
+.death_monster_3-3 {
+	background-image: url(../images/death/death_monster_3-3.png);
+	background-size: 100%;
+}
+
+.death_monster_4-3 {
+	background-image: url(../images/death/death_monster_4-3.png);
+	background-size: 100%;
+}
+
+.dead-zone-magma {
+	background-image: url(../images/death/dead_zone_magma.png);
+	background-size: 100%;    
+}

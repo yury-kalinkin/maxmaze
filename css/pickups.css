@@ -1,0 +1,51 @@
+div.crystall_1{
+	background-image: url(../images/pickups/red_crystall.png);
+}
+
+div.crystall_2{
+	background-image: url(../images/pickups/green_crystall.png);
+}
+
+div.crystall_3{
+	background-image: url(../images/pickups/blue_crystall.png);
+}
+
+div.crystall_4{
+	background-image: url(../images/pickups/black_crystall.png);
+}
+
+div.max_chest_closed{
+	background-image: url(../images/pickups/max_chest_closed.png);
+}
+
+div.max_chest_opened{
+	background-image: url(../images/pickups/max_chest_opened.png);
+}
+
+div.alien_chest_closed{
+	background-image: url(../images/pickups/alien_chest_closed.png);
+}
+
+div.alien_chest_opened{
+	background-image: url(../images/pickups/alien_chest_opened.png);
+}
+
+div.max_spec_chest_closed{
+	background-image: url(../images/pickups/max_spec_chest_closed.png);
+}
+
+div.max_spec_chest_opened{
+	background-image: url(../images/pickups/max_spec_chest_opened.png);
+}
+
+div.alien_spec_chest_closed{
+	background-image: url(../images/pickups/alien_spec_chest_closed.png);
+}
+
+div.alien_spec_chest_opened{
+	background-image: url(../images/pickups/alien_spec_chest_opened.png);
+}
+
+div.pack{
+	background-image: url(../images/pickups/pack.png);
+}

@@ -1,0 +1,91 @@
+div.hand{
+	background-image: url(../images/items/hand.png);
+}
+
+div.shotgun{
+	background-image: url(../images/items/shotgun.png);
+}
+
+div.wasp-gun{
+	background-image: url(../images/items/wasp-gun.png);
+}
+
+div.shells{
+	background-image: url(../images/items/shells.png);
+}
+
+div.powered-shells{
+	background-image: url(../images/items/powered_shells.png);
+}
+
+div.wasps{
+	background-image: url(../images/items/wasps.png);
+}
+
+div.poison-wasps{
+	background-image: url(../images/items/poison-wasps.png);
+}
+
+div.clone-module{
+	background-image: url(../images/items/clone_module.png);
+}
+
+div.clone{
+	background-image: url(../images/items/clone.png);
+}
+
+div.bioplasma{
+	background-image: url(../images/items/bioplasma.png);
+}
+
+div.petrorit{
+	background-image: url(../images/items/petrorit.png);
+}
+
+div.plutonius{
+	background-image: url(../images/items/plutonius.png);
+}
+
+div.organoid{
+	background-image: url(../images/items/organoid.png);
+}
+
+div.hyperquartz{
+	background-image: url(../images/items/hyperquartz.png);
+}
+
+div.dark-matter{
+	background-image: url(../images/items/dark_matter.png);
+}
+
+div.kikis{
+	background-image: url(../images/items/kikis.png);
+}
+
+div.obsidian{
+	background-image: url(../images/items/obsidian.png);
+}
+
+div.diamona{
+	background-image: url(../images/items/diamona.png);
+}
+
+div.mud-key{
+	background-image: url(../images/items/mud_key.png);
+}
+
+div.small-medkit{
+	background-image: url(../images/items/small-medkit.png);
+}
+
+div.medkit{
+	background-image: url(../images/items/medkit.png);
+}
+
+div.big-medkit{
+	background-image: url(../images/items/big-medkit.png);
+}
+
+div.shit{
+	background-image: url(../images/items/shit.png);
+}

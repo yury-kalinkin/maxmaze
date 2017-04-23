@@ -1,0 +1,78 @@
+div.cell {    
+	display: inline-block;
+    height: 100px;
+    width: 100px;
+	/*border: 1px solid black;*/
+}
+
+div.newRow {
+    display: block;
+    width: 1200px;
+    align: center;
+	margin: auto;
+	margin-bottom: -5px;
+}
+
+div.gameField {
+
+}
+
+.scores {
+    font-size: 40px;
+    float:left;
+    color:green;
+}
+
+.life {
+    font-size: 40px;
+    float:left;
+    color:red;
+}
+
+.inventory-board {
+    float:right;
+}
+
+.selected_item {
+	font-size: 40px;
+	color:white;
+}
+
+.current_ammo {
+	font-size: 40px;	
+	color:white;
+}
+
+.world {
+	font-size: 40px;
+	color:white;
+        align: center;
+}
+
+.hide {
+	display: none;
+}
+
+.search{
+	width: 400px;
+	height: 300px;
+	position: fixed;	
+}
+
+.searchShadow {
+	left: 12%;
+	top: 12%;
+	background-color: black;
+}
+
+.searchBox {
+	left: 10%;
+	top: 10%;
+	color:black;
+	font-size: 80px;
+	background-color: #FFFFFF;
+}
+
+body{
+    background-color: black;
+}
