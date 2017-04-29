@@ -2,15 +2,13 @@ mxmz.packHelper = {};
 
 mxmz.packHelper.openPack = function(packMaster) {
     var loot = mxmz.packHelper.getItemsFromPack(packMaster);
-    mxmz.inventory.draw(loot, 0, loot.length);
-    mxmz.interactionProcessor.keyDown(mxmz.interactionProcessor.interactions.OPEN_PACK);
+    mxmz.pack.drawPack(loot, 0, loot.length);
     loot.forEach(function(item) {
         mxmz.max.getItem(item);
     });
 }
 
 mxmz.packHelper.getItemsFromPack = function(packMaster) {
-    console.log('getItemsFromPack > packMaster:', packMaster);
     var packItemsList = [];    
     for (var itemWrapper of mxmz.npcs[packMaster].pack) {
         var currItem = mxmz.itemsHelper.getItemByCode(itemWrapper.itemCode);

@@ -78,7 +78,9 @@ mxmz.playerHelper.changeTranslate = function() {
     mxmz.playerHelper.refreshWorldInfoSpan();
     mxmz.playerHelper.refreshSelectedItem();
     mxmz.playerHelper.refreshCurrentAmmo();
-    mxmz.inventory.refreshInventoryDescription();        
+    mxmz.inventory.refreshInventoryDescription();
+    mxmz.pack.refreshPackDescription();
+    mxmz.chestHelper.changeOpenedChestItemsTranslate();
 }
 
 mxmz.playerHelper.refreshAllTranslate = function() {

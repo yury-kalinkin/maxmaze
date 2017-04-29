@@ -1,5 +1,17 @@
 mxmz.chestHelper = {};
 
+mxmz.chestHelper.currentChestItems = [];
+
+mxmz.chestHelper.isChestOpened = function() {
+    return mxmz.chestHelper.currentChestItems && mxmz.chestHelper.currentChestItems.length;
+}
+
+mxmz.chestHelper.changeOpenedChestItemsTranslate = function() {
+    if (mxmz.chestHelper.isChestOpened()) {
+        mxmz.itemsDisplayProcessor.refreshItemsDescription(mxmz.chestHelper.currentChestItems, mxmz.inventory);
+    }
+};
+
 mxmz.chestHelper.getItemsFromOpenedBox = function(boxType) {    
     var foundItems = [];
     var chestItemsList = mxmz.chestHelper.getChestItemsList(boxType);

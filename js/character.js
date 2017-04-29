@@ -26,9 +26,9 @@ mxmz.Character = {
 
             if (this.life <= 0) {
                     this.characterDie();
-            }
-            
-            this.processDamagedPerson(person);
+            } else {
+                this.processDamagedPerson(person);
+            }           
             
 	},
         

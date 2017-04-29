@@ -2,7 +2,7 @@ mxmz.interactionProcessor = {};
 
 mxmz.interactionProcessor.interactions = {
     OPEN_CHEST: 'open.chest',
-    OPEN_PACK: 'open.pack'
+    TALK_TO_NPC: 'talk.to.npc'
 }
 
 mxmz.interactionProcessor.interaction = function(place) {
@@ -20,11 +20,18 @@ mxmz.interactionProcessor.interaction = function(place) {
 mxmz.interactionProcessor.openChest = function(place) {
     var max = mxmz.max;
     var loot = mxmz.chestHelper.getItemsFromOpenedBox(place);
-    mxmz.inventory.draw(loot, 0, loot.length);
+    mxmz.chestHelper.currentChestItems = loot;
+    mxmz.itemsDisplayProcessor.draw(loot, 0, loot.length);
     mxmz.chestHelper.drawBoxOpened(max.lookCoords.x, max.lookCoords.y, max.look);
     loot.forEach(function(item) {
         max.getItem(item);
     });    
+};
+
+mxmz.interactionProcessor.closeChest = function() {
+    mxmz.chestHelper.currentChestItems = [];
+    mxmz.inventory.hide();
+    mxmz.max.keyBoard();
 }
 
 mxmz.interactionProcessor.talk = function() {
@@ -44,12 +51,9 @@ mxmz.interactionProcessor.keyDown = function(event) {
         if ((e.keyCode === 69 || e.keyCode === 13 || e.keyCode === 32)) {
             if (event === mxmz.interactionProcessor.interactions.OPEN_CHEST) {
                 mxmz.inventory.hide();
+                mxmz.interactionProcessor.closeChest();
                 mxmz.max.keyBoard();
             };
-            if (event === mxmz.interactionProcessor.interactions.OPEN_PACK) {
-                mxmz.inventory.hide();
-                mxmz.max.keyBoard();            
-            }            
         }
     };
 }

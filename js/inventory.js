@@ -10,9 +10,9 @@ mxmz.inventory = {
 };
 
 mxmz.inventory.currentBorders = {
-        lower: 0,
-        upper: mxmz.inventory.inventorySize
-    }
+    lower: 0,
+    upper: mxmz.inventory.inventorySize
+}
 
 mxmz.inventory.drawInventoryCategories = function() {
     
@@ -36,45 +36,14 @@ mxmz.inventory.drawInventoryCategories = function() {
     }
 };
 
-mxmz.inventory.draw = function(items, from, to) {
-    var inventoryBoxDiv = mxmz.viewProcessor.getViewElement('.inventoryBox');
-    var rowDiv;
-    var cellDiv;
-
-    for (var i = from; i < to; i++) {
-        var currItem = items[i];
-        rowDiv = mxmz.viewProcessor.createViewElement('div');        
-        inventoryBoxDiv.appendChild(rowDiv);        
-        cellDiv = mxmz.viewProcessor.createViewElement('div');
-        cellDiv.setAttribute('class', 'inventory-image-cell');
-        if (currItem){
-            cellDiv.classList.add(items[i].cssClass);
-        }
-        rowDiv.appendChild(cellDiv);
-        cellDiv = mxmz.viewProcessor.createViewElement('div');
-        cellDiv.setAttribute('class', 'inventory-description-cell');               
-        rowDiv.appendChild(cellDiv);
-        rowDiv.classList.add('inventory-newRow');
-        rowDiv.classList.add('inventory-row-' + i);
-        if (currItem){
-            var descr = mxmz.playerHelper.translate(currItem.description);
-            var qty = currItem.data && currItem.data.qty ? '(' + currItem.data.qty + ') ' : '';
-            mxmz.viewProcessor.fillViewElementBySelector(
-                    '.inventory-row-' + i + ' .inventory-description-cell', qty + descr);
-        }                 
-    }    
-};
-
 mxmz.inventory.drawInventory = function (){
     mxmz.inventory.inventoryShow = true;
-    mxmz.inventory.draw(
+    mxmz.itemsDisplayProcessor.draw(
             mxmz.inventory.filteredItems, mxmz.inventory.currentBorders.lower, mxmz.inventory.currentBorders.upper);
 }
 
-mxmz.inventory.updateInventory = function (){        
-    mxmz.viewProcessor.ereaseViewElement('.inventoryBox');
-    mxmz.inventory.draw(
-            mxmz.inventory.filteredItems, mxmz.inventory.currentBorders.lower, mxmz.inventory.currentBorders.upper);
+mxmz.inventory.update = function (){        
+    mxmz.itemsDisplayProcessor.updateItemList(mxmz.inventory.filteredItems, mxmz.inventory);
     mxmz.inventory.showMarker(mxmz.inventory.selectedItemIndex, 'inventory-selected');
 }
 
@@ -82,15 +51,8 @@ mxmz.inventory.refreshInventoryDescription = function() {
     if (!mxmz.inventory.inventoryShow) {
         return;
     }
-    for (var i = mxmz.inventory.currentBorders.lower; i < mxmz.inventory.currentBorders.upper; i++) {
-        var currItem = mxmz.inventory.filteredItems[i];
-        if (currItem){
-            var descr = mxmz.playerHelper.translate(currItem.description);
-            var qty = currItem.data && currItem.data.qty ? '(' + currItem.data.qty + ') ' : '';
-            mxmz.viewProcessor.fillViewElementBySelector(
-                    '.inventory-row-' + i + ' .inventory-description-cell', qty + descr);
-        }
-    }    
+    mxmz.itemsDisplayProcessor.refreshItemsDescription(mxmz.inventory.filteredItems, mxmz.inventory);
+   
 }
 
 mxmz.inventory.selectCategory = function(step) {
@@ -151,29 +113,36 @@ mxmz.inventory.selectItem = function(step) {
         return;
     }
 
-    var currItemIndex = mxmz.inventory.currentCursorItemIndex + step; 
-    
-    if (mxmz.inventory.filteredItems[currItemIndex] && 
-            (currItemIndex < mxmz.inventory.currentBorders.lower 
-            || currItemIndex > (mxmz.inventory.currentBorders.upper - 1))) {
-        mxmz.inventory.currentCursorItemIndex = mxmz.inventory.currentCursorItemIndex + step;
-        mxmz.inventory.currentBorders.lower = mxmz.inventory.currentBorders.lower + step;
-        mxmz.inventory.currentBorders.upper = mxmz.inventory.currentBorders.upper + step;
-        mxmz.inventory.updateInventory(step);
-    } else {
-        currItemIndex = currItemIndex < 0 ? 
-            0 : currItemIndex > (mxmz.inventory.currentBorders.upper - 1) ? 
-            (mxmz.inventory.currentBorders.upper - 1) : currItemIndex;        
-    }
+    var showMarkerCondition = function() {
+        return mxmz.inventory.currentCursorItemIndex !== mxmz.inventory.selectedItemIndex 
+            || mxmz.inventory.ammoSelection;
+    };
 
-    mxmz.inventory.hideMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');
-    
-    mxmz.inventory.currentCursorItemIndex = currItemIndex;
+    mxmz.itemsDisplayProcessor.selectItem(mxmz.inventory.filteredItems, mxmz.inventory, step, showMarkerCondition);
+
+//    var currItemIndex = mxmz.inventory.currentCursorItemIndex + step; 
+//    
+//    if (mxmz.inventory.filteredItems[currItemIndex] && 
+//            (currItemIndex < mxmz.inventory.currentBorders.lower 
+//            || currItemIndex > (mxmz.inventory.currentBorders.upper - 1))) {
+//        mxmz.inventory.currentCursorItemIndex = mxmz.inventory.currentCursorItemIndex + step;
+//        mxmz.inventory.currentBorders.lower = mxmz.inventory.currentBorders.lower + step;
+//        mxmz.inventory.currentBorders.upper = mxmz.inventory.currentBorders.upper + step;
+//        mxmz.inventory.update(step);
+//    } else {
+//        currItemIndex = currItemIndex < 0 ? 
+//            0 : currItemIndex > (mxmz.inventory.currentBorders.upper - 1) ? 
+//            (mxmz.inventory.currentBorders.upper - 1) : currItemIndex;        
+//    }
+//
+//    mxmz.inventory.hideMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');
+//    
+//    mxmz.inventory.currentCursorItemIndex = currItemIndex;
      
-    if (mxmz.inventory.currentCursorItemIndex !== mxmz.inventory.selectedItemIndex 
-            || mxmz.inventory.ammoSelection) {        
-        mxmz.inventory.showMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');
-    }
+//    if (mxmz.inventory.currentCursorItemIndex !== mxmz.inventory.selectedItemIndex 
+//            || mxmz.inventory.ammoSelection) {        
+//        mxmz.inventory.showMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');
+//    }
 
 }
 
@@ -211,7 +180,7 @@ mxmz.inventory.showLastInventory = function() {
         return categoryFilter.indexOf(item.type) !== -1;
     });
     mxmz.inventory.currentCursorItemIndex = mxmz.inventory.selectedItemIndex;
-    mxmz.inventory.updateInventory();    
+    mxmz.inventory.update();    
 }
 
 mxmz.inventory.show = function(categoryFilter) {    
@@ -381,7 +350,7 @@ mxmz.inventory.inventoryKeyBoard = function () {
 };
 
 mxmz.inventory.showAmmoSelectionForSelectedWeapon = function() {
-    mxmz.inventory.updateInventory();
+    mxmz.inventory.update();
     mxmz.inventory.hideMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-selected');
     mxmz.inventory.currentCursorItemIndex = 0;
     mxmz.inventory.showMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');    
@@ -389,26 +358,15 @@ mxmz.inventory.showAmmoSelectionForSelectedWeapon = function() {
 
 mxmz.inventory.isAmmoPresentForSelectedWeapon = function() {
     return mxmz.inventory.inventoryShow && mxmz.max.selectedItem.key === 
-            mxmz.inventory.filteredItems[mxmz.inventory.currentCursorItemIndex].key &&
+            (mxmz.inventory.filteredItems[mxmz.inventory.currentCursorItemIndex] && 
+                mxmz.inventory.filteredItems[mxmz.inventory.currentCursorItemIndex].key) &&
             mxmz.max.selectedItem.type === mxmz.itemsHelper.itemTypes.WEAPON;
 }
 
 mxmz.inventory.showMarker = function(index, inventoryClass) {
-    if(index < mxmz.inventory.currentBorders.lower || index >= mxmz.inventory.currentBorders.upper) {
-        return;
-    }
-    mxmz.viewProcessor.addAnimationToViewElementBySelector(
-            '.inventory-row-' + index + ' .inventory-image-cell', inventoryClass);
-    mxmz.viewProcessor.addAnimationToViewElementBySelector(
-            '.inventory-row-' + index + ' .inventory-description-cell', inventoryClass);
+    mxmz.itemsDisplayProcessor.showMarker(mxmz.inventory, index, inventoryClass);
 };
 
 mxmz.inventory.hideMarker = function(index, inventoryClass) {
-    if(index < mxmz.inventory.currentBorders.lower || index >= mxmz.inventory.currentBorders.upper) {
-        return;
-    }
-    mxmz.viewProcessor.removeAnimationFromViewElementBySelector(
-            '.inventory-row-' + index + ' .inventory-image-cell', inventoryClass);
-    mxmz.viewProcessor.removeAnimationFromViewElementBySelector(
-            '.inventory-row-' + index + ' .inventory-description-cell', inventoryClass);
+    mxmz.itemsDisplayProcessor.hideMarker(mxmz.inventory, index, inventoryClass);
 };
