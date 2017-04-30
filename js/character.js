@@ -2,6 +2,7 @@ mxmz.Character = {
 
         lastCharacterView: null,
         characterType: null,
+        freeze: false,
         
 	getDamage: function(person, damage, vector) {
             

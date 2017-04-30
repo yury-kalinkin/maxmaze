@@ -15,14 +15,19 @@
         <link rel="stylesheet" type="text/css" href="css/pickups.css">        
 	<link rel="stylesheet" type="text/css" href="css/max.css">        
         <link rel="stylesheet" type="text/css" href="css/inventory.css">
+        <link rel="stylesheet" type="text/css" href="css/dialog.css">
 	<script type="text/javascript" src="js/global-objects.js"></script>       
 	<script type="text/javascript" src="js/utils-helper.js"></script>  
+        <script type="text/javascript" src="js/dialog.js"></script>         
+        <script type="text/javascript" src="js/dialog-processor.js"></script> 
         <script type="text/javascript" src="js/sound-processor.js"></script>        
         <script type="text/javascript" src="js/items-helper.js"></script>
         <script type="text/javascript" src="js/view-processor.js"></script>
         <script type="text/javascript" src="js/css-helper.js"></script>        
 	<script type="text/javascript" src="js/max.js"></script>
-        <script type="text/javascript" src="js/inventory-helper.js"></script>        
+        <script type="text/javascript" src="js/items-display-processor.js"></script>
+        <script type="text/javascript" src="js/inventory-helper.js"></script>
+        <script type="text/javascript" src="js/pack.js"></script>
         <script type="text/javascript" src="js/inventory.js"></script>
         <script type="text/javascript" src="js/character-helper.js"></script>
         <script type="text/javascript" src="js/character.js"></script>        
@@ -32,6 +37,7 @@
 	<script type="text/javascript" src="json/levels.js"></script>
         <script type="text/javascript" src="json/items.js"></script>
         <script type="text/javascript" src="json/chests.js"></script>
+        <script type="text/javascript" src="json/dialogs.js"></script>
         <script type="text/javascript" src="js/chest-helper.js"></script>
         <script type="text/javascript" src="js/pack-helper.js"></script>
         <script type="text/javascript" src="json/npcs.js"></script>        
@@ -81,9 +87,10 @@
     </span>
 
     <span class="dialogWrapper hide">
-            <span class="dialogImage search"></span>
-            <span class="dialogText search"></span>
+        <div id="npc-name"></div>
+        <div id="npc-phrase" class="dialogText"></div>
+        <div id="max-phrase" class="dialogText"></div>
     </span>		
 </body>
-ver.0.052
+ver.0.053
 </html>

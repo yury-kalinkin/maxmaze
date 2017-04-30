@@ -8,7 +8,6 @@ mxmz.dialogs.tumo = [
     new mxmz.Dialog('dialog.max.where.am.i', 'dialog.tumo.this.is.shards'),
     new mxmz.Dialog('dialog.max.bye', ['dialog.tumo.bye', 'dialog.tumo.will.see.later', 'dialog.tumo.leave'], 
         function() {
-            console.log('EXIT DIALOG');
             mxmz.dialogProcessor.closeDialog();
         })
 ];

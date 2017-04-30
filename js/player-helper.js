@@ -1,4 +1,4 @@
-﻿mxmz.playerHelper = {
+mxmz.playerHelper = {
     scores: null,
     currentLang: null
 }

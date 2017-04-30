@@ -85,4 +85,19 @@ mxmz.en_translate =
             
             'resource.shit.translate': 'Healing shit',
             'resource.shit.descr.translate': 'It is said that if you eat this shit healing or even smear, healing comes immediately',
+            
+            'npc.tumo.guy': 'Tumo',
+            
+            'dialog.max.hello': 'Hello',
+            'dialog.max.who.are.you': 'Who are you?',
+            'dialog.max.where.am.i': 'Where am I?',
+            'dialog.max.bye': 'Bye.',
+            'dialog.tumo.hi': 'Hi.', 
+            'dialog.tumo.nihao': 'Nihao, human.', 
+            'dialog.tumo.was.up': 'Hey! Wasup?!',
+            'dialog.tumo.i.am.tumo': 'I am Tumo. Cyclopoid.',
+            'dialog.tumo.this.is.shards': 'You are in Shards. This is shard of Rocks.',
+            'dialog.tumo.bye': 'Bye, human!', 
+            'dialog.tumo.will.see.later': 'Ok. Will see you later.', 
+            'dialog.tumo.leave': 'Leave so soon?'
         }

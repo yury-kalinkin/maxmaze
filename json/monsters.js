@@ -64,10 +64,12 @@ mxmz.monsters = {
     },
     '1-3': {
         name: 'white.skeleton',
-        life: 6,
-        damage: 7,
+        life: 16,
+        damage: 13,
         loot: [
-            mxmz.itemsHelper.itemCode.PETRORIT
+            mxmz.itemsHelper.itemCode.ORGANOID,
+            mxmz.itemsHelper.itemCode.PETRORIT,
+            mxmz.itemsHelper.itemCode.HYPERQUARTZ  
         ],
     },
     '2-3': {
@@ -81,12 +83,11 @@ mxmz.monsters = {
     },
     '3-3': {
         name: 'land.rat',
-        life: 14,
-        damage: 13,
+        life: 6,
+        damage: 7,
         loot: [
-            mxmz.itemsHelper.itemCode.ORGANOID,
-            mxmz.itemsHelper.itemCode.PETRORIT,
-            mxmz.itemsHelper.itemCode.HYPERQUARTZ            
+          mxmz.itemsHelper.itemCode.PETRORIT,
+          mxmz.itemsHelper.itemCode.ORGANOID
         ],
     },
     '4-3': {

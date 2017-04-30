@@ -84,5 +84,20 @@
             'key.mud-key.descr.translate': 'Дурацкий ключ из грязи. КаХу?',
             
             'resource.shit.translate': 'Целебное говно',
-            'resource.shit.descr.translate': 'Говорят, что если състь это целебное говно или хотя бы обмазаться, исцеление придет незамедлительно'
+            'resource.shit.descr.translate': 'Говорят, что если състь это целебное говно или хотя бы обмазаться, исцеление придет незамедлительно',
+            
+            'npc.tumo.guy': 'Тумо',
+            
+            'dialog.max.hello': 'Привет',
+            'dialog.max.who.are.you': 'Кто ты?',
+            'dialog.max.where.am.i': 'Где я?',
+            'dialog.max.bye': 'Пока.',
+            'dialog.tumo.hi': 'Приветики.', 
+            'dialog.tumo.nihao': 'Нихао, человече.', 
+            'dialog.tumo.was.up': 'Хей! Вазззап?!',
+            'dialog.tumo.i.am.tumo': 'Я Тумо. Циклопоид.',
+            'dialog.tumo.this.is.shards': 'Ты в Осколках. Это -- осколок Камней.',
+            'dialog.tumo.bye': 'Пока, человече!', 
+            'dialog.tumo.will.see.later': 'Хорошо. Увидимся позже.', 
+            'dialog.tumo.leave': 'Уже уходишь?'
         }

@@ -39,7 +39,9 @@ mxmz.actionProcessor.move = function() {
 mxmz.actionProcessor.moveMonsters = function() {
 
 	mxmz.levelDataProcessor.characters.forEach(function (character) {
-		character.walk();
+            if (!character.freeze) {
+                character.walk();
+            };
 	});
 	
 }

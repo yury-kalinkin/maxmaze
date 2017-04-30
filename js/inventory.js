@@ -120,30 +120,6 @@ mxmz.inventory.selectItem = function(step) {
 
     mxmz.itemsDisplayProcessor.selectItem(mxmz.inventory.filteredItems, mxmz.inventory, step, showMarkerCondition);
 
-//    var currItemIndex = mxmz.inventory.currentCursorItemIndex + step; 
-//    
-//    if (mxmz.inventory.filteredItems[currItemIndex] && 
-//            (currItemIndex < mxmz.inventory.currentBorders.lower 
-//            || currItemIndex > (mxmz.inventory.currentBorders.upper - 1))) {
-//        mxmz.inventory.currentCursorItemIndex = mxmz.inventory.currentCursorItemIndex + step;
-//        mxmz.inventory.currentBorders.lower = mxmz.inventory.currentBorders.lower + step;
-//        mxmz.inventory.currentBorders.upper = mxmz.inventory.currentBorders.upper + step;
-//        mxmz.inventory.update(step);
-//    } else {
-//        currItemIndex = currItemIndex < 0 ? 
-//            0 : currItemIndex > (mxmz.inventory.currentBorders.upper - 1) ? 
-//            (mxmz.inventory.currentBorders.upper - 1) : currItemIndex;        
-//    }
-//
-//    mxmz.inventory.hideMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');
-//    
-//    mxmz.inventory.currentCursorItemIndex = currItemIndex;
-     
-//    if (mxmz.inventory.currentCursorItemIndex !== mxmz.inventory.selectedItemIndex 
-//            || mxmz.inventory.ammoSelection) {        
-//        mxmz.inventory.showMarker(mxmz.inventory.currentCursorItemIndex, 'inventory-pointed');
-//    }
-
 }
 
 mxmz.inventory.activateItem = function(index) {

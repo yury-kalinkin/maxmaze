@@ -1,2 +1,25 @@
+.dialogWrapper{
+    
+    left: 10%;
+    top: 10%;
+    color: red;
+    font-size: 30px;
+    background-color: #FFFFFF;    
+    
+    display: inline-block;
+    position: fixed;
+    padding: 5px;
+}
 
+.dialogWrapper #max-phrase {
+    color: blue;
+}
 
+.dialogWrapper #npc-phrase {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.dialogWrapper.hide{
+    display: none;
+}
