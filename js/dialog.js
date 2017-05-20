@@ -1,6 +1,4 @@
-mxmz.Dialog = function (maxPhrase, npcAnswer, result, condition) {
-    this.maxPhrase = maxPhrase;
-    this.npcAnswer = npcAnswer;
-    this.result = result;
-    this.condition = condition;
+mxmz.Dialog = function (greeting, phrases) {
+    this.greeting = greeting;
+    this.phrases = phrases;
 }

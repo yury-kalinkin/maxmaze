@@ -1,10 +1,12 @@
 mxmz.dialogProcessor = {};
 
 mxmz.dialogProcessor.currentDialog = [];
+mxmz.dialogProcessor.lastPhrase = {};
 mxmz.dialogProcessor.currentNpc = {};
 
 mxmz.dialogProcessor.fillCurrentDilog = function (dialog) {
-    for (phrase of dialog) {
+    console.log('fillCurrentDilog > dialog:', dialog);
+    for (phrase of dialog.phrases) {
         if (phrase.condition && !phrase.condition()) {
             continue;
         }
@@ -13,13 +15,29 @@ mxmz.dialogProcessor.fillCurrentDilog = function (dialog) {
 }
 
 mxmz.dialogProcessor.beginDialog = function(npc, dialog) {
-    mxmz.dialogProcessor.currentNpc = npc;
-    mxmz.dialogProcessor.currentNpc.freeze = true;
-    
+    if (npc) {
+        mxmz.dialogProcessor.currentNpc = npc;
+        mxmz.dialogProcessor.currentNpc.freeze = true;        
+    }
+        
+    mxmz.dialogProcessor.currentDialog = [];
     mxmz.dialogProcessor.fillCurrentDilog(dialog);
     
     mxmz.dialogProcessor.prepareDialogWrapper();
-    mxmz.dialogProcessor.drawDialog()
+    $('.dialogWrapper #npc-phrase').html('<div>' + mxmz.playerHelper.translate(dialog.greeting) + '</div>');
+    mxmz.dialogProcessor.drawDialog()    
+    mxmz.dialogProcessor.keyBoard();
+    mxmz.viewProcessor.removeAnimationFromViewElementBySelector('.dialogWrapper', 'hide');
+};
+
+mxmz.dialogProcessor.switchDialog = function(dialog) {
+        
+    mxmz.dialogProcessor.currentDialog = [];
+    mxmz.dialogProcessor.fillCurrentDilog(dialog);
+    
+    mxmz.dialogProcessor.prepareDialogWrapper();    
+    mxmz.dialogProcessor.drawDialog();
+    $('.dialogWrapper #npc-phrase').html('<div>' + mxmz.playerHelper.translate(mxmz.dialogProcessor.getNPCAnswer(mxmz.dialogProcessor.lastPhrase)) + '</div>');
     mxmz.dialogProcessor.keyBoard();
     mxmz.viewProcessor.removeAnimationFromViewElementBySelector('.dialogWrapper', 'hide');
 };
@@ -39,21 +57,29 @@ mxmz.dialogProcessor.drawDialog = function() {
     };
 };
 
-mxmz.dialogProcessor.selectDialog = function(selectedPhraseIndex) {
-    var selectedPhrase = mxmz.dialogProcessor.currentDialog[selectedPhraseIndex-1];
-    var npcAnswer = '';
+mxmz.dialogProcessor.getNPCAnswer = function(selectedPhrase) {
     if (Array.isArray(selectedPhrase.npcAnswer)) {
-        npcAnswer = selectedPhrase.npcAnswer[mxmz.utilsHelper.getRandomInt(0, selectedPhrase.npcAnswer.length-1)];
+        return selectedPhrase.npcAnswer[mxmz.utilsHelper.getRandomInt(0, selectedPhrase.npcAnswer.length-1)];
     } else {
-        npcAnswer = selectedPhrase.npcAnswer;
+        return selectedPhrase.npcAnswer;
     }
+}
+
+mxmz.dialogProcessor.selectDialog = function(selectedPhraseIndex) {
+    mxmz.dialogProcessor.lastPhrase = mxmz.dialogProcessor.currentDialog[selectedPhraseIndex-1];
+    var selectedPhrase = mxmz.dialogProcessor.lastPhrase;
+    var npcAnswer = mxmz.dialogProcessor.getNPCAnswer(selectedPhrase);
     $('.dialogWrapper #npc-phrase').html('<div>' + mxmz.playerHelper.translate(npcAnswer) + '</div>');
+    if (selectedPhrase.subDialog) {
+        mxmz.dialogProcessor.beginDialog(mxmz.dialogProcessor.currentNpc, selectedPhrase.subDialog);
+    }
     if (selectedPhrase.result) {
         selectedPhrase.result();
     }
 };
 
 mxmz.dialogProcessor.closeDialog = function() {
+    console.log('closeDialog')
     document.onkeydown = function (e) {
         mxmz.viewProcessor.addAnimationToViewElementBySelector('.dialogWrapper', 'hide');
         mxmz.dialogProcessor.currentDialog = [];
