@@ -3,6 +3,7 @@ mxmz.dialogProcessor = {};
 mxmz.dialogProcessor.currentDialog = [];
 mxmz.dialogProcessor.lastPhrase = {};
 mxmz.dialogProcessor.currentNpc = {};
+mxmz.dialogProcessor.currentDialogIndex = 0;
 
 mxmz.dialogProcessor.fillCurrentDilog = function (dialog) {
     console.log('fillCurrentDilog > dialog:', dialog);
@@ -11,7 +12,8 @@ mxmz.dialogProcessor.fillCurrentDilog = function (dialog) {
             continue;
         }
         mxmz.dialogProcessor.currentDialog.push(phrase);
-    };    
+    };
+    mxmz.dialogProcessor.currentDialogIndex = 1;    
 }
 
 mxmz.dialogProcessor.beginDialog = function(npc, dialog) {
@@ -52,9 +54,10 @@ mxmz.dialogProcessor.drawDialog = function() {
     $('.dialogWrapper #npc-name').html(mxmz.playerHelper.translate(mxmz.dialogProcessor.currentNpc.name));
     var i = 1;    
     for (phrase of mxmz.dialogProcessor.currentDialog) {
-        $('.dialogWrapper #max-phrase').append('<div>' + i + ': ' + mxmz.playerHelper.translate(phrase.maxPhrase) + '</div>');
+        $('.dialogWrapper #max-phrase').append('<div id="max-dialog-' + i + '">' + i + ': ' + mxmz.playerHelper.translate(phrase.maxPhrase) + '</div>');
         i++;
     };
+    mxmz.dialogProcessor.addSelectedMarker(mxmz.dialogProcessor.currentDialogIndex);
 };
 
 mxmz.dialogProcessor.getNPCAnswer = function(selectedPhrase) {
@@ -85,34 +88,76 @@ mxmz.dialogProcessor.closeDialog = function() {
         mxmz.dialogProcessor.currentDialog = [];
         mxmz.dialogProcessor.currentNpc.freeze = false;
         mxmz.dialogProcessor.currentNpc = {};
+        mxmz.dialogProcessor.currentDialogIndex = 0;
         mxmz.max.keyBoard();
+    }
+}
+
+mxmz.dialogProcessor.addSelectedMarker = function(dialogIndex) {
+    console.log('addSelectedMarker > dialogIndex:', dialogIndex)
+    $('#max-dialog-' + dialogIndex).css('background-color', 'red');
+}
+
+mxmz.dialogProcessor.removeSelectedMarker = function(dialogIndex) {
+    $('#max-dialog-' + dialogIndex).css('background-color', '');
+}
+
+mxmz.dialogProcessor.moveDialogSelectorUp = function() {
+    var index = mxmz.dialogProcessor.currentDialogIndex;    
+    if (index > 1) {
+        mxmz.dialogProcessor.removeSelectedMarker(index);
+        index = --mxmz.dialogProcessor.currentDialogIndex;
+        mxmz.dialogProcessor.addSelectedMarker(index);
+    }
+}
+
+mxmz.dialogProcessor.moveDialogSelectorDown = function() {
+    var index = mxmz.dialogProcessor.currentDialogIndex;    
+    if (index < mxmz.dialogProcessor.currentDialog.length) {
+        mxmz.dialogProcessor.removeSelectedMarker(index);
+        index = ++mxmz.dialogProcessor.currentDialogIndex;
+        mxmz.dialogProcessor.addSelectedMarker(index);
     }
 }
 
 mxmz.dialogProcessor.keyBoard = function() {
     document.onkeydown = function (e) {
-
+        
         switch (e.keyCode) {
-            case 49:
+            
+            case 87:
             {
-                mxmz.dialogProcessor.selectDialog(1);
+                mxmz.dialogProcessor.moveDialogSelectorUp()
                 break;
             }
-            case 50:
+            case 38:
             {
-                mxmz.dialogProcessor.selectDialog(2);
+                console.log('38')
+                mxmz.dialogProcessor.moveDialogSelectorUp()
+                break;
+            }                
+            case 83:
+            {
+                mxmz.dialogProcessor.moveDialogSelectorDown()
                 break;
             }
-            case 51:
+            case 40:
             {
-                mxmz.dialogProcessor.selectDialog(3);
+                mxmz.dialogProcessor.moveDialogSelectorDown()
                 break;
             }
-            case 52:
+            
+            case 69:
             {
-                mxmz.dialogProcessor.selectDialog(4);
+                mxmz.dialogProcessor.selectDialog(mxmz.dialogProcessor.currentDialogIndex);
                 break;
-            }            
+            }
+            case 13:
+            {
+                mxmz.dialogProcessor.selectDialog(mxmz.dialogProcessor.currentDialogIndex);
+                break;
+            }             
+                   
             default:
             {
             }
