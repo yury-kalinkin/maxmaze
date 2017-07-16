@@ -416,3 +416,23 @@ div.custom_decor_stol15 {
 	background-color: grey;
 	background-image: url(../images/world/stol15.png);
 }
+
+div.custom_decor_rh_2_11 {
+	background-color: gray;
+	background-image: url(../images/world/rh_2_11.png);
+}
+
+div.custom_decor_rh_2_12 {
+	background-color: gray;
+	background-image: url(../images/world/rh_2_12.png);
+}
+
+div.custom_decor_rh_1_11 {
+	background-color: gray;
+	background-image: url(../images/world/rh_1_11.png);
+}
+
+div.custom_decor_rh_1_12 {
+	background-color: gray;
+	background-image: url(../images/world/rh_1_12.png);
+}
