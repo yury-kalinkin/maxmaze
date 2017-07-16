@@ -19,6 +19,7 @@ mxmz.Npc = function (id, x, y, type) {
 	thisNpc.life = thisNpc.data.life;
         thisNpc.damage = thisNpc.data.damage;
         thisNpc.code = thisNpc.data.code;
+        thisNpc.imagePrefix = thisNpc.data.imagePrefix;
         
         //redefined methods
         

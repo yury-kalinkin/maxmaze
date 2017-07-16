@@ -94,8 +94,10 @@ mxmz.gameFieldProcessor.putNpc = function(params) {
     var npcType = params.element.replace('n-', '');
     var newNpc = new mxmz.Npc(mxmz.utilsHelper.getRandomInt(1, 10000), params.index2+1, params.index1+1, npcType);
     mxmz.levelDataProcessor.characters.push(newNpc);
+    console.log('newNpc: ', newNpc);
+    console.log('newNpc.getClass: ', newNpc.getClass(newNpc.imagePrefix, 'front'));
     mxmz.viewProcessor.addAnimationToViewElement(
-            params.cell, newNpc.getClass(npcType, 'front'));
+            params.cell, newNpc.getClass(newNpc.imagePrefix, 'front'));
     mxmz.viewProcessor.addAnimationToViewElement(
             params.cell, mxmz.cssProcessor.getFloorClass(mxmz.levelDataProcessor.levelType));    
 }

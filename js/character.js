@@ -17,7 +17,7 @@ mxmz.Character = {
                 this.move(moveTo);                      
             }
                 var element = mxmz.viewProcessor.getViewElement('.cell.coord_' + this.x + '_' + this.y);
-                var damageClass = this.getClass(this.type, 'damage');
+                var damageClass = this.getClass(this.imagePrefix, 'damage');
                 element.classList.add(damageClass);
                 setTimeout(function() {            
                     if (element) {
@@ -110,12 +110,13 @@ mxmz.Character = {
                 this.move(characterGoTo);	
 	},
 	
-	getClass: function (characterType, characterView) {
-            return this.characterType + '_' + characterType + '_' + characterView;
+	getClass: function (imagePrefix, characterView) {
+            return this.characterType + '_' + imagePrefix + '_' + characterView;
 	},
 	
 	addCharacterDecay: function() {
-            var decayClass = this.getClass(this.type, 'dead');
+            var decayClass = this.getClass(this.imagePrefix, 'dead');
+            console.log('decayClass:', decayClass)
             mxmz.viewProcessor.addAnimationToViewElementBySelector(
                     '.cell.coord_' + this.x + '_' + this.y, decayClass);		
 	},
@@ -141,7 +142,7 @@ mxmz.Character = {
 	
 	addCharacterToHisNextDiv: function(toGoX, toGoY, characterGoTo) {
             mxmz.viewProcessor.addAnimationToViewElementBySelector(
-                    '.cell.coord_' + toGoX + '_' + toGoY, this.getClass(this.type, characterGoTo.view));
+                    '.cell.coord_' + toGoX + '_' + toGoY, this.getClass(this.imagePrefix, characterGoTo.view));
 	},
 	
 	addCharacterToHisNextMatrixCell: function(toGoX, toGoY) {
@@ -151,7 +152,7 @@ mxmz.Character = {
 	
 	removeCharacterClassFromHisCurrentDiv: function() {
             var currentCharacterElement = mxmz.viewProcessor.getViewElement('.cell.coord_' + this.x + '_' + this.y);
-            var characterDamageClass = this.getClass(this.type, 'damage');
+            var characterDamageClass = this.getClass(this.imagePrefix, 'damage');
             mxmz.cssHelper.removeCharacterCss(currentCharacterElement, characterDamageClass);
 
 	},

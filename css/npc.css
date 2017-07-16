@@ -17,3 +17,23 @@ div.npc_tumo_left {
 div.npc_tumo_damage {
 	background-image: url(../images/npc/npc_tumo_damage.png);
 }
+
+div.npc_nagi_front {
+	background-image: url(../images/npc/npc_nagi_front.png);
+}
+
+div.npc_nagi_back {
+	background-image: url(../images/npc/npc_nagi_back.png);
+}
+
+div.npc_nagi_right {
+	background-image: url(../images/npc/npc_nagi_right.png);
+}
+
+div.npc_nagi_left {
+	background-image: url(../images/npc/npc_nagi_left.png);
+}
+
+div.npc_nagi_damage {
+	background-image: url(../images/npc/npc_nagi_damage.png);
+}

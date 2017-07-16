@@ -37,10 +37,9 @@ mxmz.interactionProcessor.closeChest = function() {
 mxmz.interactionProcessor.talk = function(target) {
     var max = mxmz.max;
     var npc = mxmz.levelDataProcessor.getCharacterByCoords(max.lookCoords.x, max.lookCoords.y);
-//    if (npc.data.relationship < 0) {
-//        return console.log('npc ' + npc.data.name + ' said: ARRRRRRRHHH!!!!');
-//    }
-//    return console.log('npc ' + npc.data.name + ' said: ' + npc.data.speak);
+    if (npc.data.relationship < 0) {
+        return;
+    }
 
     mxmz.dialogProcessor.beginDialog(npc, mxmz.dialogs[npc.code]);
 }

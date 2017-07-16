@@ -81,6 +81,7 @@ mxmz.playerHelper.changeTranslate = function() {
     mxmz.inventory.refreshInventoryDescription();
     mxmz.pack.refreshPackDescription();
     mxmz.chestHelper.changeOpenedChestItemsTranslate();
+    mxmz.dialogProcessor.refreshDialog();
 }
 
 mxmz.playerHelper.refreshAllTranslate = function() {

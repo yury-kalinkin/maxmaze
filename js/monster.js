@@ -12,6 +12,7 @@ mxmz.Monster = function (id, x, y, type) {
 	thisMonster.x = x;
 	thisMonster.y = y;
         thisMonster.type = type;
+        thisMonster.imagePrefix = thisMonster.type;
         
         thisMonster.data = mxmz.monsters[thisMonster.type];
         
