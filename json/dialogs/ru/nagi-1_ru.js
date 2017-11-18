@@ -1,4 +1,4 @@
-mxmz.getDialogNagi1Ru = function() {
+﻿mxmz.getDialogNagi1Ru = function() {
     return {
         'Good stars, stranger.':'Добрых звезд, странник.',
         'Can you tell me about this place?':'Можешь рассказать об этом месте?',

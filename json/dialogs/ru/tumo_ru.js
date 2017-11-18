@@ -1,4 +1,4 @@
-mxmz.getDialogTumoRu = function() {
+﻿mxmz.getDialogTumoRu = function() {
     return {
         'Yup?': 'Да?',        
         'Hello': 'Привет',

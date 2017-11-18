@@ -1,4 +1,4 @@
-mxmz.ru_translate =
+﻿mxmz.ru_translate =
     {
         'max.dead': 'Макс умер. Да зравствует Макс! Жми Enter.',
 
