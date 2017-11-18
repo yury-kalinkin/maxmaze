@@ -6,6 +6,7 @@ mxmz.interactionProcessor.interactions = {
 }
 
 mxmz.interactionProcessor.interaction = function(place) {
+    console.log('interaction > place:', place)
     if (mxmz.gameFieldProcessor.isHereClosedBox(place)) {
         mxmz.interactionProcessor.openChest(place);
         mxmz.interactionProcessor.keyDown(mxmz.interactionProcessor.interactions.OPEN_CHEST);

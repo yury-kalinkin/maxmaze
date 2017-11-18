@@ -71,7 +71,7 @@ mxmz.dialogs['nagi-1'] = new mxmz.Dialog('Good stars, stranger.', [
                 return mxmz.max.life < 10;
             })
             .setResult(function() {mxmz.dialogProcessor.closeDialog()}),
-    new mxmz.Phrase('Never mind.`', 
+    new mxmz.Phrase('Never mind.', 
         ['Ok.', 'As you wish.', 'Come back any time.'],
         function() {
             mxmz.dialogProcessor.closeDialog();

@@ -1,0 +1,31 @@
+mxmz.getDialogNagi1Ru = function() {
+    return {
+        'Good stars, stranger.':'Добрых звезд, странник.',
+        'Can you tell me about this place?':'Можешь рассказать об этом месте?',
+        'This place is calling "Shards". It is Our Sanctuary. The Good One save us all here.':'Это место называется "Осколки". Это наше убежище. Добрый спас нас всех здесь.',
+        'The Good One? Who is it?':'Добрый? Кто он??',
+        'He is our Saver.':'Он наш Спаситель.', 
+        'He is Pillar of our home':'Он столп нашего дома',
+        'He is the one, who does not care about any life.':'Он тот, кто ценит любую жизнь.',
+        'Sanctuary?':'Убежище?',
+        'We all lost our homes.':'Мы все потеряли свой дом.',
+        'We are hiding here':'Мы прячемся тут',
+        'We are no where to go.':'Нам некуда идти.',
+        'I have more qestions.':'У меня есть еще вопросы.',
+        'Ask.':'Спрашивай.', 
+        'Go on':'Давай', 
+        'I am glad to answer.':'Я рад ответить.',
+        'Tell me about yourself.':'Расскажи о себе.',
+        'I am an orphant. Like others.':'Я сирота. Как и остальные.', 
+        'I came here from far away. Like others.':'Я пришел сюда издалека. Как остальные.',
+        'I living in shards because I no where to go.':'Я живу в осколках, потому что мне некуда идти.',
+        'I will die soon. I wonna sex.':'Я скоро умру. Я хочу секса.',
+        'Are you junkie?':'Ты наркоман?', 
+        'Are you frik?':'Ты фрик?', 
+        'Fuck off!':'Отъебись!',
+        'Never mind.':'Не бери в голову.',
+        'Ok.':'Ок.', 
+        'As you wish.':'Как пожелаешь.', 
+        'Come back any time.':'Возвращайся в любое время.'
+    }
+}

@@ -86,6 +86,8 @@ mxmz.en_translate =
         'resource.shit.translate': 'Healing shit',
         'resource.shit.descr.translate': 'It is said that if you eat this shit healing or even smear, healing comes immediately',
 
-        'npc.tumo.guy': 'Tumo'
+        'npc.tumo.guy': 'Tumo',
+        'npc.nagi.guy': 'Nagi',
+        'salt.stone.village': 'Salt Stone Village'
 
     }

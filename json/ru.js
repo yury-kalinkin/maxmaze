@@ -86,6 +86,8 @@ mxmz.ru_translate =
         'resource.shit.translate': 'Целебное говно',
         'resource.shit.descr.translate': 'Говорят, что если състь это целебное говно или хотя бы обмазаться, исцеление придет незамедлительно',
 
-        'npc.tumo.guy': 'Тумо'
+        'npc.tumo.guy': 'Тумо',
+        'npc.nagi.guy': 'Наги',
+        'salt.stone.village': 'Камнесольная деревня'
 
     }
